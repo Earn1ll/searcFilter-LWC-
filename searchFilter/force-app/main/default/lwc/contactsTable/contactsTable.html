@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Contact Search">
+        <lightning-layout multiple-rows="true" vertical-align="end">
+            <lightning-layout-item size="2" padding="around-small">
+                <lightning-input type="text" label="Enter Contact Name" value={key}
+                onchange={updateKey}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="2" padding="around-small">
+                <lightning-button label="FILTER" onclick={handleSearch} variant="brand"></lightning-button>  
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-datatable key-field="id" data={contacts} columns={columns}></lightning-datatable>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
